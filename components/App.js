@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import TodoInput from './TodoInput'
-import TodoList from './TodoList'
+import TaskInput from './TaskInput'
+import TaskList from './TaskList'
 import { connect } from 'react-redux'
 import {bindActionCreators} from 'redux'
 import actions from '../redux/actions'
@@ -11,10 +11,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Todo List</h1>
+        <h1>Task List</h1>
         <UserInfo user={this.props.user} actions={this.props.actions}/>
-        <TodoInput addTodo={this.props.actions.addTodo}/>
-        <TodoList actions={this.props.actions} todos={this.props.todos}/>
+        <TaskInput addTask={this.props.actions.addTask}/>
+        <TaskList actions={this.props.actions} tasks={this.props.tasks}/>
       </div>
     )
   }

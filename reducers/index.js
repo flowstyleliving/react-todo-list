@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import todoReducer from './todoReducer'
+import taskReducer from './taskReducer'
 import userReducer from './userReducer'
 
 const rootReducer = combineReducers({
-  todos: todoReducer,
+  tasks: taskReducer,
   user: userReducer
 })
 

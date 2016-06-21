@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class TodoInput extends Component {
+class TaskInput extends Component {
 
   constructor(props, context) {
     super(props, context)
@@ -17,7 +17,7 @@ class TodoInput extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.addTodo(this.state.inputText)
+    this.props.addTask(this.state.inputText)
   }
 
   render() {
@@ -26,7 +26,7 @@ class TodoInput extends Component {
       <form onSubmit={this.handleSubmit.bind(this)}>
         <input
           type="text"
-          placeholder="Type in your todo"
+          placeholder="Type in your task"
           value={this.state.inputText}
           onChange={this.handleChange.bind(this)}
         />
@@ -38,4 +38,4 @@ class TodoInput extends Component {
 
 }
 
-export default TodoInput
+export default TaskInput

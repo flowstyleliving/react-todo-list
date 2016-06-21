@@ -1,19 +1,19 @@
 let actions = {
-  addTodo: function(text) {
+  addTask: function(text) {
     return {
-      type: 'ADD_TODO',
+      type: 'ADD_TASK',
       text: text
     }
   },
-  completeTodo: function(id) {
+  completeTask: function(id) {
     return {
-      type: 'COMPLETE_TODO',
+      type: 'COMPLETE_TASK',
       id: id
     }
   },
-  deleteTodo: function(id) {
+  deleteTask: function(id) {
     return {
-      type: 'DELETE_TODO',
+      type: 'DELETE_TASK',
       id: id
     }
   },
