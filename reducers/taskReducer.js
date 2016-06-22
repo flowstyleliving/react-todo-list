@@ -12,6 +12,13 @@ let taskReducer = function(tasks = [], action) {
           return task.id === action.id ?
             Object.assign({}, task, {notes: action.text}) : task
         })
+    case 'COMPLETE_NOTE':
+    console.log(this.props.note.id)
+      return
+        notes.map((note) => {
+          return note.id === action.id ?
+            Object.assign({}, note, {completed: !note.completed}) : note
+        })
     case 'ADD_TASK':
       return [{
           text: action.text,
