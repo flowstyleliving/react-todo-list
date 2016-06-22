@@ -6,6 +6,12 @@ function getId(tasks) {
 
 let taskReducer = function(tasks = [], action) {
   switch (action.type) {
+    case 'ADD_NOTE':
+      return
+        tasks.map((task) => {
+          return task.id === action.id ?
+            Object.assign({}, task, {notes: action.text}) : task
+        })
     case 'ADD_TASK':
       return [{
           text: action.text,
