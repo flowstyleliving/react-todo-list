@@ -7,30 +7,49 @@ import { Provider } from 'react-redux'
 // let initialState = {
 //   todos: [{
 //     id: 0,
-//     completed: false,
+//
 //     text: 'Initial todo for demo purposes'
 //   }],
-//   user: {
-//     username: 'se_ohm',
-//     id: 64
-//   }
-// }
+//
 
 let initialState = {
   tasks: [{
     id: 1,
     title: 'do this',
-    descript: 'With Care and Love'
+    completed: false,
+    notes: [{
+      id: 1,
+      title: 'note1',
+      completed: false
+    }]
   }, {
     id: 2,
     title: 'then this',
-    descript: 'With even more Attention'
+    completed: false,
+    notes: [{
+      id: 2,
+      title: 'With even more Attention',
+      completed: false
+    }]
   }, {
     id: 3,
     title: 'yes',
-    descript: 'Love is True when Truth is Love'
+    completed: false,
+    notes: [{
+      id: 3,
+      title: 'Love is True when Truth is Love',
+      completed: false
+    }, {
+      id: 4,
+      title: 'Peace',
+      completed: false
+    }]
     }
-  ]
+  ],
+  user: {
+      username: 'se_ohm',
+      id: 64
+    }
 }
 
 let store = configureStore(initialState)

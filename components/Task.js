@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Note from './Note'
 
 class Task extends Component {
 
@@ -16,6 +17,11 @@ class Task extends Component {
         <div>{this.props.task.title}</div>
         <button onClick={this.handleComplete.bind(this)}>Mark as completed</button>
         <button onClick={this.handleDelete.bind(this)}>Delete task</button>
+        <ul>
+          {this.props.task.notes.map((note) => {
+            return <Note note={note}/>
+          })}
+        </ul>
       </li>
     )
   }

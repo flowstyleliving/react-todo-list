@@ -1,4 +1,16 @@
 let actions = {
+  addNote: (text) => {
+    return {
+      type: 'ADD_NOTE',
+      text: text
+    }
+  },
+  completeNote: (id) => {
+    return {
+      type: 'COMPLETE_NOTE',
+      id: id
+    }
+  },
   addTask: function(text) {
     return {
       type: 'ADD_TASK',
