@@ -10,7 +10,7 @@ class Task extends Component {
   }
 
   handleChange(event) {
-    console.log('this')
+    console.log(this)
     this.setState({
       note: event.target.value
     })
@@ -46,9 +46,9 @@ class Task extends Component {
               <button type="submit">Submit</button>
             </form>
           </li>
-          {/*{this.props.task.notes.map((note) => {
+          {this.props.task.notes.map((note) => {
             return <Note key={note.id} note={note}/>
-          })}*/}
+          })}
         </ul>
       </li>
     )

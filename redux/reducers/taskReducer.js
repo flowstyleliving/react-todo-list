@@ -19,7 +19,7 @@ let taskReducer = function(tasks = [], action) {
         })
     case 'ADD_TASK':
       return [{
-          text: action.text,
+          title: action.text,
           completed: false,
           id: getId(tasks),
           notes: []
