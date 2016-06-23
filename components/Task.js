@@ -11,7 +11,8 @@ class Task extends Component {
 
   handleNote(event) {
     event.preventDefault()
-    this.props.actions.completeNote(this.state.note, this.props.task.id)
+    console.log('this', this)
+    this.props.actions.addNote(this.state.note, this.props.task.id)
   }
 
   handleComplete() {
