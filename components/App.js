@@ -4,7 +4,7 @@ import TaskList from './TaskList'
 import { connect } from 'react-redux'
 import {bindActionCreators} from 'redux'
 import actions from '../redux/actions'
-import UserInfo from '../components/UserInfo'
+// import UserInfo from '../components/UserInfo'
 
 class App extends Component {
 
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <h1>Task List</h1>
-        <UserInfo user={this.props.user} actions={this.props.actions}/>
+        {/*<UserInfo user={this.props.user} actions={this.props.actions}/>*/}
         <TaskInput addTask={this.props.actions.addTask}/>
         <TaskList actions={this.props.actions} tasks={this.props.tasks}/>
       </div>

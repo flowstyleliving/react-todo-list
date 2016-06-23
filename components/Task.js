@@ -9,6 +9,13 @@ class Task extends Component {
     }
   }
 
+  handleChange(event) {
+    console.log('this')
+    this.setState({
+      note: event.target.value
+    })
+  }
+
   handleNote(event) {
     event.preventDefault()
     console.log('this', this)
@@ -32,13 +39,16 @@ class Task extends Component {
         <ul>
           <li>
             <form onSubmit={this.handleNote.bind(this)}>
-              <input type="text" placeholder="Note..." defaultValue={this.state.note}/>
+              <input type="text"
+                placeholder="Note..."
+                onChange={this.handleChange.bind(this)}
+                value={this.state.note}/>
               <button type="submit">Submit</button>
             </form>
           </li>
-          {this.props.task.notes.map((note) => {
-            return <Note note={note}/>
-          })}
+          {/*{this.props.task.notes.map((note) => {
+            return <Note key={note.id} note={note}/>
+          })}*/}
         </ul>
       </li>
     )
