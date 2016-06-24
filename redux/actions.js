@@ -1,8 +1,8 @@
 let actions = {
-  addNote: (text, id) => {
+  addNote: (title, id) => {
     return {
       type: 'ADD_NOTE',
-      text: text,
+      title: title,
       id: id
     }
   },

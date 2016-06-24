@@ -18,7 +18,7 @@ let initialState = {
     title: 'do this',
     completed: false,
     notes: [{
-      id: 1,
+      id: 0,
       title: 'note1',
       completed: false
     }]
@@ -27,7 +27,7 @@ let initialState = {
     title: 'then this',
     completed: false,
     notes: [{
-      id: 2,
+      id: 0,
       title: 'With even more Attention',
       completed: false
     }]
@@ -36,11 +36,11 @@ let initialState = {
     title: 'yes',
     completed: false,
     notes: [{
-      id: 3,
+      id: 0,
       title: 'Love is True when Truth is Love',
       completed: false
     }, {
-      id: 4,
+      id: 1,
       title: 'Peace',
       completed: false
     }]

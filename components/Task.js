@@ -2,15 +2,14 @@ import React, { Component } from 'react'
 import Note from './Note'
 
 class Task extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       note: ""
     }
   }
 
   handleChange(event) {
-    console.log(this)
     this.setState({
       note: event.target.value
     })
@@ -18,7 +17,6 @@ class Task extends Component {
 
   handleNote(event) {
     event.preventDefault()
-    console.log('this', this)
     this.props.actions.addNote(this.state.note, this.props.task.id)
   }
 
@@ -33,11 +31,9 @@ class Task extends Component {
   render() {
     return (
       <li>
-        <div>{this.props.task.title}</div>
+        {this.props.task.title} &nbsp;
         <button onClick={this.handleComplete.bind(this)}>Mark as completed</button>
         <button onClick={this.handleDelete.bind(this)}>Delete task</button>
-        <ul>
-          <li>
             <form onSubmit={this.handleNote.bind(this)}>
               <input type="text"
                 placeholder="Note..."
@@ -45,9 +41,9 @@ class Task extends Component {
                 value={this.state.note}/>
               <button type="submit">Submit</button>
             </form>
-          </li>
-          {this.props.task.notes.map((note) => {
-            return <Note key={note.id} note={note}/>
+        <ul>
+          {this.props.task.notes.map((note, i) => {
+            return <Note key={`note${i}`} note={note}/>
           })}
         </ul>
       </li>
